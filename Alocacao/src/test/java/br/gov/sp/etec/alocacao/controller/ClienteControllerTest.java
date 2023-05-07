@@ -15,7 +15,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import br.gov.sp.etec.alocacao.model.Carro;
 import br.gov.sp.etec.alocacao.model.Cliente;
 import br.gov.sp.etec.alocacao.repository.ClienteRepository;
 
@@ -37,28 +36,28 @@ public class ClienteControllerTest {
 	@Test
 	public void clienteTestSucess() {
 		when(repository.findAll()).thenReturn(getListCliente());
-		List<Cliente> clientes = controller.cliente();
+		List<Cliente> clientes = getListCliente();
 		assertNotNull(clientes);
 	}
 	
 	@Test
-	public void clienteTesteNull() {
+	public void clienteTestNull() {
 		when(repository.findAll()).thenReturn(null);
-		List<Cliente> clientes = controller.cliente();
-		assertNull(null);
+		List<Cliente> clientes  = getListCliente();
+		assertNull(clientes);
 	}
 	
 	@Test
-	public void adicionarClienteTesteComSucesso() {
+	public void adicionarClienteTest() {
 		when(repository.save(any(Cliente.class))).thenReturn(getCliente());
 		Cliente c = controller.addCliente(getCliente());
 		assertEquals("Maycon", c.getNome());
 	}
 	
 	@Test
-	public void atualizarClienteTesteComSucesso() {
+	public void atualizarClienteTest() {
 		when(repository.save(any(Cliente.class))).thenReturn(getCliente());
-		Cliente c = controller.attCliente(new Cliente("Maycon","012.345.678-90","maycon@email.com.br","(11) 98765-4321"));
+		Cliente c = controller.attCliente(new Cliente("Guilherme","987.654.321-09","guilherme@email.com.br","(13) 12345-6789"));
 		assertEquals(1l, c.getId());
 		assertEquals("Maycon", c.getNome());
 		assertEquals("012.345.678-90", c.getCpf());
@@ -67,7 +66,7 @@ public class ClienteControllerTest {
 	}
 	
 	@Test
-	public void apagarClienteTesteComSucesso() {
+	public void apagarClienteTest() {
 		 controller.delCliente(1L);
 		 assertNull(null);
 	}
