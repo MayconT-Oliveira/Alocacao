@@ -15,7 +15,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+<<<<<<< HEAD
 import br.gov.sp.etec.alocacao.entity.Cliente;
+=======
+import br.gov.sp.etec.alocacao.model.Cliente;
+>>>>>>> 255e8e3b4debab56ff4c1e6a2b796809103a7a53
 import br.gov.sp.etec.alocacao.repository.ClienteRepository;
 
 @ExtendWith(SpringExtension.class)

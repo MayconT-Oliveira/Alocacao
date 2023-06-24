@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*package br.gov.sp.etec.alocacao.controller;
+=======
+package br.gov.sp.etec.alocacao.controller;
+>>>>>>> 255e8e3b4debab56ff4c1e6a2b796809103a7a53
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -16,7 +20,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+<<<<<<< HEAD
 import br.gov.sp.etec.alocacao.entity.Grupo;
+=======
+import br.gov.sp.etec.alocacao.model.Grupo;
+>>>>>>> 255e8e3b4debab56ff4c1e6a2b796809103a7a53
 import br.gov.sp.etec.alocacao.repository.GrupoRepository;
 
 @ExtendWith(SpringExtension.class)
@@ -108,4 +116,7 @@ public class GrupoControllerTest {
 	}
 
 }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 255e8e3b4debab56ff4c1e6a2b796809103a7a53
