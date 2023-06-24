@@ -1,0 +1,82 @@
+package br.gov.sp.etec.alocacao.model;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Grupo {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idGrupo;
+	private String descricao;
+	private Double valorDiaria;
+	private Date dataCriacao;
+	private Date dataAtualizacao;
+	private Boolean status;
+	
+	public Grupo() {
+		super();
+	}
+
+	public Grupo(String descricao, double valorDiaria, Date dataCriacao, Date dataAtualizacao, Boolean status) {
+		super();
+		this.descricao = descricao;
+		this.valorDiaria = valorDiaria;
+		this.dataCriacao = dataCriacao;
+		this.dataAtualizacao = dataAtualizacao;
+		this.status = status;
+	}
+
+	public Long getIdGrupo() {
+		return idGrupo;
+	}
+
+	public void setIdGrupo(Long idGrupo) {
+		this.idGrupo = idGrupo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public double getValorDiaria() {
+		return valorDiaria;
+	}
+
+	public void setValorDiaria(double valorDiaria) {
+		this.valorDiaria = valorDiaria;
+	}
+
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(Date dataCriacao) {
+		this.dataCriacao = dataCriacao;
+	}
+
+	public Date getDataAtualizacao() {
+		return dataAtualizacao;
+	}
+
+	public void setDataAtualizacao(Date dataAtualizacao) {
+		this.dataAtualizacao = dataAtualizacao;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+}
+

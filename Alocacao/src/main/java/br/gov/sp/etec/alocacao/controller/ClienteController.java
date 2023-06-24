@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.gov.sp.etec.alocacao.model.Carro;
-import br.gov.sp.etec.alocacao.model.Cliente;
+import br.gov.sp.etec.alocacao.entity.Cliente;
 import br.gov.sp.etec.alocacao.repository.ClienteRepository;
 
 @RestController
